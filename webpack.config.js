@@ -15,5 +15,17 @@ module.exports = {
     contentBase: path.join(__dirname, './src/static'),
     hot: true,
     open: true
+  },
+  module: {
+    loaders: [
+      {
+        test: /.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015']
+        }
+      }
+    ]
   }
 }
