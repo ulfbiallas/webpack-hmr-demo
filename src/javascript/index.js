@@ -1,9 +1,6 @@
-import Rectangle from './Rectangle'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-let rectangle = new Rectangle(5, 4)
-let area = rectangle.getArea()
+import TestComponent from './TestComponent.jsx'
 
-console.log(`The rectangle has an area of ${area}`)
-
-var rootElement = document.getElementById('root')
-rootElement.textContent = `The rectangle has an area of ${area}`
+ReactDOM.render(<TestComponent/>, document.getElementById('root'))
