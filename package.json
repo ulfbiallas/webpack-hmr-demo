@@ -2,7 +2,8 @@
   "name": "webpack-hmr-demo",
   "scripts": {
     "build": "rm -rf build && webpack",
-    "server": "webpack-dev-server"
+    "server": "webpack-dev-server",
+    "eslint": "eslint src/**/*.js"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
@@ -11,6 +12,7 @@
     "babel-preset-react": "6.24.1",
     "copy-webpack-plugin": "4.1.0",
     "css-loader": "0.28.7",
+    "eslint": "4.8.0",
     "extract-text-webpack-plugin": "3.0.0",
     "less": "2.7.2",
     "less-loader": "4.0.5",
