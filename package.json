@@ -1,6 +1,7 @@
 {
   "name": "webpack-hmr-demo",
   "scripts": {
+    "build": "webpack",
     "server": "webpack-dev-server"
   },
   "devDependencies": {
@@ -8,6 +9,7 @@
     "babel-loader": "7.1.2",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
+    "copy-webpack-plugin": "4.1.0",
     "css-loader": "0.28.7",
     "less": "2.7.2",
     "less-loader": "4.0.5",

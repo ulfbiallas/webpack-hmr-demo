@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/javascript/index',
@@ -8,7 +9,8 @@ module.exports = {
     path: path.resolve(__dirname, 'build')
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin([{ from: 'src/static/index.html' }])
   ],
   devServer: {
     port: 3000,
