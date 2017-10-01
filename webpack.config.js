@@ -25,6 +25,18 @@ module.exports = {
         options: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: "style-loader"
+          }, {
+            loader: "css-loader"
+          }, {
+            loader: "less-loader"
+          }
+        ]
       }
     ]
   }
