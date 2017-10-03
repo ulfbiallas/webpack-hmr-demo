@@ -1,6 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import TestComponent from './TestComponent'
+import TestComponent from './TestComponent';
 
-ReactDOM.render(<TestComponent/>, document.getElementById('root'))
+ReactDOM.render(<TestComponent/>, document.getElementById('root'));
