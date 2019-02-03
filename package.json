@@ -3,20 +3,18 @@
   "scripts": {
     "build": "rm -rf build && webpack",
     "server": "webpack-dev-server",
-    "test": "jest --colors",
-    "eslint": "eslint src/**/*.js"
+    "test": "jest --colors"
   },
   "devDependencies": {
-    "@babel/core": "7.2.2",
-    "@babel/preset-env": "7.3.1",
-    "@babel/preset-react": "7.0.0",
-    "babel-loader": "8.0.5",
-    "babel-register": "6.26.0",
+    "@types/enzyme": "3.1.16",
+    "@types/jest": "23.3.13",
+    "@types/react": "16.8.1",
+    "@types/react-dom": "16.0.11",
+    "@types/react-router-dom": "4.3.1",
     "copy-webpack-plugin": "4.6.0",
     "css-loader": "2.1.0",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.8.0",
-    "eslint": "5.13.0",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.0.0",
@@ -25,6 +23,9 @@
     "path": "0.12.7",
     "raf": "3.4.1",
     "react-test-renderer": "16.7.0",
+    "ts-jest": "23.10.5",
+    "ts-loader": "5.3.3",
+    "typescript": "3.3.1",
     "webpack": "4.29.0",
     "webpack-cli": "3.2.1",
     "webpack-dev-server": "3.1.14"

@@ -7,15 +7,9 @@ To try this demo run
     npm run server
 
 and a webpack-dev-server will be started on port 3000.
-When you change the `index.js`, the app in the browser will update automatically.
+When you change the `index.tsx`, the app in the browser will update automatically.
 
 To see changes on the `index.html`, you need to reload the page manually!
-
-## Linting
-
-There is a linter setup using `ESLint`. You can run the check by executing:
-
-    npm run eslint
 
 ## Tests
 

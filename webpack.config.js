@@ -5,10 +5,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/javascript/index',
+  entry: './src/typescript/index',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build')
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -24,8 +27,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.jsx?$/,
-        loader: 'babel-loader',
+        test: /.tsx?$/,
+        loader: 'ts-loader',
         exclude: /node_modules/
       },
       {
