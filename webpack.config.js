@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -15,12 +14,16 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new CopyWebpackPlugin([{ from: 'src/static/index.html' }]),
-    new ExtractTextPlugin('style.css')
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/static'}
+      ]
+    }),
   ],
   devServer: {
     port: 3000,
     contentBase: path.join(__dirname, './src/static'),
+    historyApiFallback: true,
     hot: true,
     open: true
   },
@@ -33,9 +36,7 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract({
-          use: ['css-loader', 'less-loader']
-        })
+        use: ['css-loader', 'less-loader']
       }
     ]
   }
