@@ -22,7 +22,9 @@ module.exports = {
   ],
   devServer: {
     port: 3000,
-    contentBase: path.join(__dirname, './src/static'),
+    static: {
+      directory: path.join(__dirname, './src/static')
+    },
     historyApiFallback: true,
     hot: true,
     open: true
