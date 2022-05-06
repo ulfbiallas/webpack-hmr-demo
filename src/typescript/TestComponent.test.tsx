@@ -1,10 +1,12 @@
 import * as React from 'react';
-import {shallow} from 'enzyme';
+import {render} from '@testing-library/react'
 import {default as TestComponent} from './TestComponent';
 
 test('<TestComponent/>', () => {
-  const wrapper = shallow(
+  const {container} = render(
     <TestComponent/>
   );
-  expect(wrapper.find('.box').text()).toBe('Hello');
+
+  const component = container.getElementsByClassName('box')[0] as HTMLDivElement
+  expect(component.innerHTML).toBe('Hello');
 });
